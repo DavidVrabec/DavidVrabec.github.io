@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 5%;
+    background-color: #4A90E2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    height: 95%;
+}
+
+.sidebar {
+    width: 15%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.menu-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #4A90E2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #357ABD;
+}
+
+#colorPicker {
+    width: 80%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+#canvas {
+    flex-grow: 1;
+    position: relative;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.box-wrapper {
+    position: absolute;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 2px solid #333;
+    padding: 10px;
+    min-width: 100px;
+    min-height: 50px;
+    resize: both;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    outline: none;
+    cursor: pointer;
+}
+
+.connector-point {
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    padding: 8px;
+}
+
+.box-wrapper:hover .connector-point {
+    display: block;
+}
+
+.connector-top {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.connector-bottom {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.connector-left {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.connector-right {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
